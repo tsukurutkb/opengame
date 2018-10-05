@@ -23,7 +23,7 @@ public class PlayerCon : MonoBehaviour
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        rigid.velocity=(-transform.forward*z+transform.right*x);
+        rigid.velocity=(transform.forward*z+transform.right*x);
         if (Physics.Raycast(transform.position, -transform.up, out hit, float.PositiveInfinity))//球体に添わせるために開店をする
         {
             Quaternion q = Quaternion.FromToRotation(transform.up, hit.normal);

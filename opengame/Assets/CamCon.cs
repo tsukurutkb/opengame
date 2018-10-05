@@ -5,11 +5,12 @@ using UnityEngine;
 public class CamCon : MonoBehaviour {
     [SerializeField]
     GameObject player;
-    private Vector3 offset;
+    private float offset;
     Vector3 targetcamPos;
+    Vector3 cameravec;
 	// Use this for initialization
 	void Start () {
-        offset = player.transform.position - transform.position;
+        offset = (player.transform.position - transform.position).magnitude;
 	}
 	
 	// Update is called once per frame
@@ -17,9 +18,8 @@ public class CamCon : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        targetcamPos = player.transform.position + offset;
+        transform.position=player.transform.position;
+        transform.rotation=player.transform.rotation;
 
-        transform.position = targetcamPos;
-        transform.LookAt(player.transform);
-    }
+        }
 }
