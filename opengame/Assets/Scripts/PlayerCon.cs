@@ -8,6 +8,14 @@ public class PlayerCon : MonoBehaviour
     Vector3 Normal_g;
     [SerializeField]
     private float speed;
+    [SerializeField]
+    private Sprite front;
+    [SerializeField]
+    private Sprite back;
+    [SerializeField]
+    private Sprite right;
+    [SerializeField]
+    private Sprite left;
     RaycastHit hit;
     // Use this for initialization
     void Start()
