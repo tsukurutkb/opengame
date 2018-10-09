@@ -8,12 +8,14 @@ public class PlayerCon : NetworkBehaviour
     Vector3 Normal_g;
     [SerializeField]
     private float speed;
+    [SerializeField]
+    private Vector3 pos;
     
     RaycastHit hit;
     // Use this for initialization
     void Start()
     {
-        transform.position=new Vector3(0,4.7f,0);
+        transform.position=pos;
         rigid = this.GetComponent<Rigidbody>();
     }
 
