@@ -17,7 +17,7 @@ public class PlayerCon : NetworkBehaviour
     }
 
 public override void OnStartLocalPlayer() {
-	Camera.main.GetComponent <CamCon> ().player = transform.gameObject;
+	Camera.main.GetComponent <CamCon> ().player = transform.Find("cam").gameObject;
 }
  
 
