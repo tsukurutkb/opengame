@@ -13,6 +13,7 @@ public class PlayerCon : NetworkBehaviour
     // Use this for initialization
     void Start()
     {
+        transform.position=new Vector3(0,4.7f,0);
         rigid = this.GetComponent<Rigidbody>();
     }
 
